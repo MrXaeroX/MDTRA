@@ -1,0 +1,64 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+<qresource>
+  <file>jpg/splash.jpg</file>
+  <file>png/icon.png</file>
+  <file>png/nvidia.png</file>
+  
+  <file>png/16x16/new.png</file>
+  <file>png/16x16/open.png</file>
+  <file>png/16x16/save.png</file>
+  <file>png/16x16/build.png</file>
+  <file>png/16x16/build2.png</file>
+  <file>png/16x16/stream.png</file>
+  <file>png/16x16/source.png</file>
+  <file>png/16x16/result.png</file>
+  <file>png/16x16/result2.png</file>
+  <file>png/16x16/settings.png</file>
+  <file>png/16x16/pic.png</file>
+  <file>png/16x16/grid.png</file>
+  <file>png/16x16/labels.png</file>
+  <file>png/16x16/legend.png</file>
+  <file>png/16x16/chart.png</file>
+  <file>png/16x16/track.png</file>
+  <file>png/16x16/delete.png</file>
+  <file>png/16x16/csel.png</file>
+  <file>png/16x16/ds.png</file>
+  <file>png/16x16/hbond.png</file>
+  <file>png/16x16/rmsd2d.png</file>
+  <file>png/16x16/nvidia.png</file>
+  <file>png/16x16/pca.png</file>
+  <file>png/16x16/ts.png</file>
+  <file>png/16x16/ddm.png</file>
+  <file>png/16x16/force.png</file>
+  <file>png/16x16/pdv.png</file>
+  <file>png/16x16/pdbview.png</file>
+  <file>png/16x16/play.png</file>
+  <file>png/16x16/stop.png</file>
+  <file>png/16x16/pause.png</file>
+  <file>png/16x16/water.png</file>
+  
+  <file>png/24x24/new.png</file>
+  <file>png/24x24/open.png</file>
+  <file>png/24x24/save.png</file>
+  <file>png/24x24/build.png</file>
+  <file>png/24x24/build2.png</file>
+  <file>png/24x24/settings.png</file>
+  <file>png/24x24/pic.png</file>
+  <file>png/24x24/grid.png</file>
+  <file>png/24x24/labels.png</file>
+  <file>png/24x24/legend.png</file>
+  <file>png/24x24/chart.png</file>
+  <file>png/24x24/track.png</file>
+  <file>png/24x24/csel.png</file>
+  <file>png/24x24/ds.png</file>
+  <file>png/24x24/hbond.png</file>
+  <file>png/24x24/rmsd2d.png</file>
+  <file>png/24x24/pca.png</file>
+  <file>png/24x24/ts.png</file>
+  <file>png/24x24/ddm.png</file>
+  <file>png/24x24/force.png</file>
+  <file>png/24x24/pdv.png</file>
+  <file>png/24x24/pdbview.png</file>
+</qresource>
+</RCC>

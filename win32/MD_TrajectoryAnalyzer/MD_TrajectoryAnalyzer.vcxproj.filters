@@ -1,0 +1,825 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\MOC">
+      <UniqueIdentifier>{a520e209-2ed3-4d6a-a798-4c3d7e19c3de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI Files">
+      <UniqueIdentifier>{c0d09957-627f-402a-a986-da212c73f3dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parser Files">
+      <UniqueIdentifier>{b33b2164-2490-4fa7-9062-64c03c484acb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library Files">
+      <UniqueIdentifier>{37f3b9dd-b856-4c58-90aa-2f72b92b85c8}</UniqueIdentifier>
+      <Extensions>lib</Extensions>
+    </Filter>
+    <Filter Include="CUDA Files">
+      <UniqueIdentifier>{fceaabe5-eb45-4673-a5f1-f06a6608e860}</UniqueIdentifier>
+      <Extensions>cu</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\mdtra_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_mainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_mainWindow.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_project.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\qrc_mdtra.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_plot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_plot.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_streamDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_streamDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_dataSourceDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_dataSourceDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_pdb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_resultDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_resultDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_resultDataSourceDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_resultDataSourceDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_cpuid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_streamMaskDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_streamMaskDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_progressDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_progressDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_threads.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_preferencesDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_preferencesDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_colors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_plotDataFilterDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_plotDataFilterDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_multiDataSourceDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_multiDataSourceDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_multiResultDataSourceDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_multiResultDataSourceDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_select_tokens_lexer.cpp">
+      <Filter>Parser Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_select_grammar_parser.cpp">
+      <Filter>Parser Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_select.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_inputTextDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_inputTextDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_selectionDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_selectionDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_distanceSearchDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_distanceSearchDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_distanceSearch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_distanceSearchResultsDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_distanceSearchResultsDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_compact_pdb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_2D_RMSD_Dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_2D_RMSD_Dialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_2D_RMSD_Plot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_2D_RMSD_Plot.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_pdb_format.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_formatDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_formatDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_secure_crt_impl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_labelDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_labelDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_hbSearchResultsDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_hbSearchDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_hbSearchResultsDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_hbSearch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_hbSearchDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_customTableWidgetItems.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_waitDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_waitDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_SAS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_occluderDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_occluderDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_userTypeDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_userTypeDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_prog_compiler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_prog_interpreter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_prog_syntaxHighlight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_prog_syntaxHighlight.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_prog_state.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_cuda.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_gpuInfoDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_gpuInfoDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_pcaDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_pcaResultsDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_pcaResultsDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_pca.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_pcaDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_torsionSearchResultsDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_torsionSearch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_torsionSearchDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_torsionSearchDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_torsionSearchResultsDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_dnaDataMiningDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_dnaDataMiningDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_forceSearchResultsDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_forceSearch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_forceSearchDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_forceSearchDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_forceSearchResultsDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_genericPlot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_histogramPlot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_histogramDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_histogramDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_histogramPlot.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_genericPlot.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_pdbCanvas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_pdbRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_pdbCanvas.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_pdbRenderer.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_render_pdb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_pipe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_prepWaterShellDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_prepWaterShellDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_messageDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\moc_mdtra_messageDialog.cpp">
+      <Filter>Source Files\MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mdtra_configFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\mdtra_main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_saverestore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_project.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_streamDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_dataSourceDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_pdb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_resultDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_resultDataSourceDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_cpuid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_streamMaskDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_progressDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_threads.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_preferencesDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_colors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_plotDataFilter.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_multiDataSourceDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_math.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_multiResultDataSourceDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_select_grammar_parser.h">
+      <Filter>Parser Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_select.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_inputTextDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_selectionDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_distanceSearchDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_distanceSearch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_distanceSearchResultsDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_compact_pdb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_pdb_flags.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_rmsd2dDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_pdb_format.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_formatDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_secure_crt_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_sse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_labelDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_hbSearchResultsDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_hbSearchDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_hbSearch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_waitDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_SAS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_occluderDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_userTypeDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_prog_compiler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_prog_interpreter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_prog_state.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_cuda.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_gpuInfoDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_pcaDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_pcaResultsDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_pca.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_torsionSearchDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_torsionSearchResultsDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_torsionSearch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_dnaDataMiningDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_forceSearchDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_forceSearchResultsDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_forceSearch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_histogramDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_rendition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_render_pdb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_pipe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_prepWaterShellDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ui_messageDialog.h">
+      <Filter>UI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mdtra_configFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\fix_crt.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_mainWindow.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\res\mdtra.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_plot.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\streamDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_streamDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\dataSourceDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_dataSourceDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\resultDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_resultDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\resultDataSourceDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_resultDataSourceDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\streamMaskDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_streamMaskDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\progressDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_progressDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\preferencesDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_preferencesDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\plotDataFilter.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_plotDataFilterDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\multiDataSourceDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_multiDataSourceDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\multiResultDataSourceDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_multiResultDataSourceDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_select_grammar.y">
+      <Filter>Parser Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_select_tokens.l">
+      <Filter>Parser Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\inputTextDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_inputTextDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\selectionDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_selectionDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\distanceSearchDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_distanceSearchDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\distanceSearchResultsDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_distanceSearchResultsDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\rmsd2dDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_2D_RMSD_Dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_2D_RMSD_Plot.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\formatDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_formatDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\labelDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_labelDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\hbSearchDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\hbSearchResultsDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_hbSearchDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_hbSearchResultsDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_customTableWidgetItems.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\waitDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_waitDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\occluderDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_occluderDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\userTypeDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_userTypeDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_prog_syntaxHighlight.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\gpuInfoDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_gpuInfoDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\pcaDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\pcaResultsDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_pcaDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_pcaResultsDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\torsionSearchDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\torsionSearchResultsDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_torsionSearchDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_torsionSearchResultsDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\dnaDataMiningDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_dnaDataMiningDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\forceSearchDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\forceSearchResultsDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_forceSearchDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_forceSearchResultsDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_genericPlot.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\histogramDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_histogramDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_histogramPlot.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_pdbCanvas.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_pdbRenderer.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_prepWaterShellDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\prepWaterShellDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\mdtra_messageDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\messageDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MD_TrajectoryAnalyzer.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\res\mdtra.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\lib\lua.lib">
+      <Filter>Library Files</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="..\..\src\mdtra_cuda_SAS.cu">
+      <Filter>CUDA Files</Filter>
+    </CudaCompile>
+  </ItemGroup>
+</Project>

@@ -26,3 +26,10 @@
 *.exe
 *.out
 *.app
+
+# Win32 specific
+*.suo
+*.sdf
+*.user
+*.deps
+Thumbs.db
