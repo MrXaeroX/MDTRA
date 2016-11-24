@@ -44,6 +44,9 @@
    <property name="text">
     <string/>
    </property>
+   <property name="pixmap">
+    <pixmap>../res/png/nvidia.png</pixmap>
+   </property>
   </widget>
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">

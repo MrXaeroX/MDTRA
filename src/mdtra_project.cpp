@@ -75,7 +75,7 @@ MDTRA_Project :: ~MDTRA_Project()
 	clear();
 }
 
-void MDTRA_Project :: clear( void )
+void MDTRA_Project :: clear()
 {
 	for (int i = 0; i < m_StreamList.count(); i++) {
 		if (m_StreamList.at(i).pdb) delete m_StreamList.at(i).pdb;
@@ -420,7 +420,7 @@ MDTRA_Stream *MDTRA_Project :: fetchStream( int index ) const
 	return const_cast<MDTRA_Stream*>(&m_StreamList.at(index));
 }
 
-int MDTRA_Project :: getValidStreamCount( void ) const
+int MDTRA_Project :: getValidStreamCount() const
 {
 	int c = 0;
 	for (int i = 0; i < m_StreamList.count(); i++) {
@@ -554,7 +554,7 @@ void MDTRA_Project :: modifyStream( int index, const QString &name, const QStrin
 	updateResultList();
 }
 
-void MDTRA_Project :: updateStreamList( void )
+void MDTRA_Project :: updateStreamList()
 {
 	m_pMainWindow->getStreamListWidget()->clear();
 	for (int i = 0; i < m_StreamList.count(); i++) {
@@ -750,7 +750,7 @@ void MDTRA_Project :: invalidateDataSourceByIndex( int index )
 	}
 }
 
-void MDTRA_Project :: updateDataSourceList( void )
+void MDTRA_Project :: updateDataSourceList()
 {
 	m_pMainWindow->getDataSourceListWidget()->clear();
 	for (int i = 0; i < m_DataSourceList.count(); i++) {
@@ -954,7 +954,7 @@ bool MDTRA_Project :: removeResultLabel( int index, int labelIndex )
 	return true;
 }
 
-void MDTRA_Project :: updateResultList( void )
+void MDTRA_Project :: updateResultList()
 {
 	int oldIndex = m_pMainWindow->getResultListWidget()->currentRow();
 
@@ -1107,8 +1107,13 @@ void MDTRA_Project :: exportResultToTXT( const MDTRA_Result *pResult, QTextStrea
 	for (int i = 0; i < iNumRows; i++) {
 		*stream << (QString("%1").arg( i + 1 ));
 		for (int j = 0; j < iNumCols; j++) {
-			float value = sampleData( pResult->sourceList.at(j).pData, i, pResult->sourceList.at(j).iActualDataSize, dataFilter, pResult->units );
-			*stream << (QString("\t%1").arg( value, 0, 'f', 5));
+			const MDTRA_DSRef *dataRef = &pResult->sourceList.at(j);
+			if ( i < dataRef->iActualDataSize ) {
+				float value = sampleData( dataRef->pData, i, dataRef->iActualDataSize, dataFilter, pResult->units );
+				*stream << (QString("\t%1").arg( value, 0, 'f', 5));
+			} else {
+				*stream << "\t";
+			}
 		}
 		*stream << endl;
 	}
@@ -1133,8 +1138,13 @@ void MDTRA_Project :: exportResultToCSV( const MDTRA_Result *pResult, QTextStrea
 	for (int i = 0; i < iNumRows; i++) {
 		*stream << (QString("%1").arg( i + 1 ));
 		for (int j = 0; j < iNumCols; j++) {
-			float value = sampleData( pResult->sourceList.at(j).pData, i, pResult->sourceList.at(j).iActualDataSize, dataFilter, pResult->units );
-			*stream << (QString(";%1").arg( value, 0, 'f', 5));
+			const MDTRA_DSRef *dataRef = &pResult->sourceList.at(j);
+			if ( i < dataRef->iActualDataSize ) {
+				float value = sampleData( dataRef->pData, i, dataRef->iActualDataSize, dataFilter, pResult->units );
+				*stream << (QString(";%1").arg( value, 0, 'f', 5));
+			} else {
+				*stream << ";";
+			}
 		}
 		*stream << endl;
 	}
@@ -1766,7 +1776,7 @@ static void fn_BuildCorrelationTable( int threadnum, int num )
 	}
 }
 
-void MDTRA_Project :: profileStart( void )
+void MDTRA_Project :: profileStart()
 {
 #if defined(WIN32)
 	m_profStart = timeGetTime();
@@ -1777,7 +1787,7 @@ void MDTRA_Project :: profileStart( void )
 #endif
 }
 
-void MDTRA_Project :: profileEnd( void )
+void MDTRA_Project :: profileEnd()
 {
 	dword totalTime;
 #if defined(WIN32)
