@@ -292,20 +292,22 @@ void HBInitConfigData( void )
 void HBFreeConfigData( void )
 {
 	const int numDonors = s_TripletDonorInfo.count();
-	MDTRA_HBTripletDonorInfo *d = &s_TripletDonorInfo[0];
-	for ( int i = 0; i < numDonors; ++i, ++d ) {
-		if ( d->XResidue ) free( d->XResidue );
-		if ( d->XTitle ) free( d->XTitle );
-		if ( d->HTitle ) free( d->HTitle );
+	if ( numDonors ) {
+		MDTRA_HBTripletDonorInfo *d = &s_TripletDonorInfo[0];
+		for ( int i = 0; i < numDonors; ++i, ++d ) {
+			if ( d->XResidue ) free( d->XResidue );
+			if ( d->XTitle ) free( d->XTitle );
+			if ( d->HTitle ) free( d->HTitle );
+		}
 	}
-
 	const int numAcceptors = s_TripletAcceptorInfo.count();
-	MDTRA_HBTripletAcceptorInfo *a = &s_TripletAcceptorInfo[0];
-	for ( int i = 0; i < numAcceptors; ++i, ++a ) {
-		if ( a->YResidue ) free( a->YResidue );
-		if ( a->YTitle ) free( a->YTitle );
+	if ( numAcceptors ) {
+		MDTRA_HBTripletAcceptorInfo *a = &s_TripletAcceptorInfo[0];
+		for ( int i = 0; i < numAcceptors; ++i, ++a ) {
+			if ( a->YResidue ) free( a->YResidue );
+			if ( a->YTitle ) free( a->YTitle );
+		}
 	}
-
 	if ( g_TripletParms ) {
 		for ( int i = 0; i < s_TripletHMax; ++i )
 			delete [] g_TripletParms[i];

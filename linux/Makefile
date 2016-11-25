@@ -8,7 +8,7 @@ ARCH=i686
 OPTIMIZE=2
 
 # make sure this is the correct compiler for your system
-CC=g++-4.4
+CC=g++
 NVCC=/usr/local/cuda/bin/nvcc
 CP=cp
 STRIP=strip -x
@@ -18,8 +18,8 @@ EXE_RESDIR=../res
 EXE_DSTDIR=../output
 EXE_OBJDIR=./obj-$(ARCH)
 
-MK_QTBIN:=/usr/local/Qt/lib/4.8.6-32/bin/
-MK_QTINC:=/usr/local/Qt/lib/4.8.6-32/include
+MK_QTBIN:=/home/xaerox/Qt/4.8.7-32/bin/
+MK_QTINC:=/home/xaerox/Qt/4.8.7-32/include
 MK_MOC=$(MK_QTBIN)moc
 MK_UIC=$(MK_QTBIN)uic
 MK_RCC=$(MK_QTBIN)rcc
@@ -36,7 +36,7 @@ CFLAGS=$(BASE_CFLAGS) $(SHCFLAGS)
 INCLUDEDIRS= -I$(SHARED_SRCDIR) -I$(MK_QTINC) -I/usr/local/cuda/include
 LIBRARYDIRS=
 
-LDFLAGS=-ldl -lstdc++ -static-libgcc -lGL -lGLU lua.so libcudart.so libQtCore.so.4 libQtGui.so.4 libQtOpenGL.so.4
+LDFLAGS=-ldl -lGL -lGLU lua.so libcudart.so libQtCore.so.4 libQtGui.so.4 libQtOpenGL.so.4 -static-libstdc++ -static-libgcc -lm
 
 DO_CC=$(CC) $(CFLAGS) $(INCLUDEDIRS) -o $@ -c $<
 
