@@ -1,5 +1,5 @@
 /***************************************************************************
-* Copyright (C) 2011-2016 Alexander V. Popov.
+* Copyright (C) 2011-2017 Alexander V. Popov.
 * 
 * This file is part of Molecular Dynamics Trajectory 
 * Reader & Analyzer (MDTRA) source code.
@@ -196,6 +196,7 @@ private slots:
 	void toolsPCA( void );
 	void tools2DRMSD( void );
 	void toolsDDM( void );
+	void toolsPDM( void );
 	void toolsHistogram( void );
 	void prepWaterShell( void );
 	void exec_on_cell_dblclicked( int row, int column );

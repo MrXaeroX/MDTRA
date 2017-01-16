@@ -1,5 +1,5 @@
 /***************************************************************************
-* Copyright (C) 2011-2016 Alexander V. Popov.
+* Copyright (C) 2011-2017 Alexander V. Popov.
 * 
 * This file is part of Molecular Dynamics Trajectory 
 * Reader & Analyzer (MDTRA) source code.
@@ -37,7 +37,6 @@ class MDTRA_DNADataMiningDialog : public QDialog, public Ui_dnaDataMiningDialog
 
 	friend void ddm_print_f( const QString &msg );
 	friend void ddm_select_f( const MDTRA_SelectionSet<MDTRA_PDB_File>* pSet );
-	friend void ddm_select2_f( const MDTRA_SelectionSet<MDTRA_PDB_File>* pSet );
 
 public:
     MDTRA_DNADataMiningDialog( QWidget *parent = 0 );

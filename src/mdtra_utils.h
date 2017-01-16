@@ -1,5 +1,5 @@
 /***************************************************************************
-* Copyright (C) 2011-2016 Alexander V. Popov.
+* Copyright (C) 2011-2017 Alexander V. Popov.
 * 
 * This file is part of Molecular Dynamics Trajectory 
 * Reader & Analyzer (MDTRA) source code.
@@ -87,7 +87,7 @@ extern void Prof_Log( const char *func, qword cycles );
 #define MDTRA_PROF_END()					 __prof_time__ = MDTRA_AppCycles() - __prof_time__; Prof_Log( __func_name__, __prof_time__ ); }
 
 extern const float *UTIL_Color4Sym( const char* symbol );
-
+extern int UTIL_GetMainDirectory( char *out, size_t outSize );
 extern char **UTIL_ListFiles( const char *directory, const char *extension, int *numfiles );
 extern void UTIL_FreeFileList( char **list );
 

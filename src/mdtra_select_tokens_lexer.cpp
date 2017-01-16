@@ -487,7 +487,7 @@ char *yytext;
 #line 1 "D:\\Documents\\96_Prog\\MDTRA_GitHub\\mdtra_main\\src\\mdtra_select_tokens.l"
 #define INITIAL 0
 /***************************************************************************
-* Copyright (C) 2011-2016 Alexander V. Popov.
+* Copyright (C) 2011-2017 Alexander V. Popov.
 * 
 * This file is part of Molecular Dynamics Trajectory 
 * Reader & Analyzer (MDTRA) source code.

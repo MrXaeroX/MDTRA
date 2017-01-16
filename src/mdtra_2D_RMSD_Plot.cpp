@@ -1,5 +1,5 @@
 /***************************************************************************
-* Copyright (C) 2011-2016 Alexander V. Popov.
+* Copyright (C) 2011-2017 Alexander V. Popov.
 * 
 * This file is part of Molecular Dynamics Trajectory 
 * Reader & Analyzer (MDTRA) source code.
@@ -398,8 +398,8 @@ bool MDTRA_2D_RMSD_Plot :: renderPlot_OpenGL( void )
 		// Draw scale titles
 		qglColor( m_pMainWindow->getColorManager()->color( COLOR_PLOT_TEXT ) );
 		for (float i = 0; i <= m_flLegendCachedMax; i += m_PPS.legendScaleFactor) {
-			QString s = QString::number( i );
-			renderText( m_PPS.rcLegend.right() + 10, m_PPS.rcLegend.bottom() - i*m_PPS.legendAxisScale + (fmDigits.height()>>1) - 2, s, m_PPS.fntDigits );
+			QString s = QString::number( i, 'f', 2 );
+			renderText( m_PPS.rcLegend.right() + 10, m_PPS.rcLegend.bottom() - i*m_PPS.legendAxisScale /*+ (fmDigits.height()>>1)- 2*/, s, m_PPS.fntDigits );
 		}
 
 		//Draw legend title

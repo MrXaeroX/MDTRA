@@ -1,5 +1,5 @@
 /***************************************************************************
-* Copyright (C) 2011-2016 Alexander V. Popov.
+* Copyright (C) 2011-2017 Alexander V. Popov.
 * 
 * This file is part of Molecular Dynamics Trajectory 
 * Reader & Analyzer (MDTRA) source code.
@@ -287,6 +287,26 @@ void HBInitConfigData( void )
 	s_TripletAcceptorInfo.reserve( 128 );
 
 	MDTRA_ForEachConfig( CONFIG_TYPE_HBRES, HBInitConfigData_LoadDonorsAndAcceptors );
+
+	// sort arrays, so null residue names will come after non-null
+	// and therefore won't override them (e.g. HOH's O won't be overriden
+	// by protein backbone's O)
+	struct {
+		const bool operator()( MDTRA_HBTripletDonorInfo &a, MDTRA_HBTripletDonorInfo &b ) const { 
+			if ( !a.XResidue ) return false;
+			else if ( !b.XResidue ) return true;
+			else return strcmp( a.XResidue, b.XResidue ) < 0;
+		}  
+	} DonorAtomLessThan;
+	std::sort( s_TripletDonorInfo.begin(), s_TripletDonorInfo.end(), DonorAtomLessThan );
+	struct {
+		const bool operator()( MDTRA_HBTripletAcceptorInfo &a, MDTRA_HBTripletAcceptorInfo &b ) const { 
+			if ( !a.YResidue ) return false;
+			else if ( !b.YResidue ) return true;
+			else return strcmp( a.YResidue, b.YResidue ) < 0;
+		}  
+	} AcceptorAtomLessThan;
+	std::sort( s_TripletAcceptorInfo.begin(), s_TripletAcceptorInfo.end(), AcceptorAtomLessThan );
 }
 
 void HBFreeConfigData( void )
@@ -300,6 +320,7 @@ void HBFreeConfigData( void )
 			if ( d->HTitle ) free( d->HTitle );
 		}
 	}
+
 	const int numAcceptors = s_TripletAcceptorInfo.count();
 	if ( numAcceptors ) {
 		MDTRA_HBTripletAcceptorInfo *a = &s_TripletAcceptorInfo[0];
@@ -308,6 +329,7 @@ void HBFreeConfigData( void )
 			if ( a->YTitle ) free( a->YTitle );
 		}
 	}
+
 	if ( g_TripletParms ) {
 		for ( int i = 0; i < s_TripletHMax; ++i )
 			delete [] g_TripletParms[i];
@@ -346,8 +368,14 @@ float HBCalcPair( const MDTRA_PDB_File *ppdb, const MDTRA_PDB_Atom *pDonor, cons
 
 	//get acceptor info
 	const MDTRA_HBTripletAcceptorInfo *pAcceptorInfo = HBFetchAcceptor( ppdb, pAtY );
-	if (!pAcceptorInfo)
-		return 0.0f;
+	if (!pAcceptorInfo) {
+		// try swap donor and acceptor
+		pAcceptorInfo = HBFetchAcceptor( ppdb, pAtX );
+		if (!pAcceptorInfo)
+			return 0.0f;
+		pAtY = pDonor;
+		pAtX = pAcceptor;
+	}
 
 	//get donor info
 	const MDTRA_HBTripletDonorInfo *pDonorInfo;
@@ -470,7 +498,7 @@ static bool HBGetTriplets( void )
 				localTriplet.yff = pAcceptorInfo->ffCode;
 				localTriplet.groupIndex = pAcceptorInfo->groupIndex;
 			
-				/*OutputDebugString( QString("Triplet: %1%2%3 - %4%5%6 - %7%8%9\n")
+			/*	OutputDebugString( QString("Triplet: %1%2%3 - %4%5%6 - %7%8%9\n")
 					.arg(pAtX->trimmed_residue).arg(pAtX->residuenumber).arg(pAtX->trimmed_title)
 					.arg(pAtH->trimmed_residue).arg(pAtH->residuenumber).arg(pAtH->trimmed_title)
 					.arg(pAtY->trimmed_residue).arg(pAtY->residuenumber).arg(pAtY->trimmed_title)

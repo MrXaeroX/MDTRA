@@ -1,5 +1,5 @@
 /***************************************************************************
-* Copyright (C) 2011-2016 Alexander V. Popov.
+* Copyright (C) 2011-2017 Alexander V. Popov.
 * 
 * This file is part of Molecular Dynamics Trajectory 
 * Reader & Analyzer (MDTRA) source code.
@@ -872,6 +872,29 @@ QStringList UTIL_MakeAbsoluteFileNames( const QStringList &list, const QString &
 	return outList;
 }
 
+int UTIL_ExtractFilePath( char *dest, size_t size, const char *src )
+{
+	size_t slen = strlen( src );
+	if ( !slen ) {
+		*dest = '\0';
+		return 0;
+	}
+
+	// Returns the path up to, but not including the last slash
+	const char *s = src + slen - 1;
+
+	while ( s != src && *s != '/' && *s != '\\' )
+		--s;
+
+	int maxsize = MDTRA_MIN( (int)(s-src), (int)size-1 );
+
+	if ( maxsize > 0 )
+		strncpy_s( dest, size, src, maxsize );
+
+	dest[maxsize] = 0;
+	return maxsize;
+}
+
 void Prof_Log( const char *func, qword cycles )
 {
 	FILE* fp = NULL;
@@ -922,6 +945,24 @@ const float *UTIL_Color4Sym( const char* symbol )
 		}
 	}
 	return s_AtomColorInfo[0].color;
+}
+
+int UTIL_GetMainDirectory( char *out, size_t outSize )
+{
+	// return main program directory
+	char buffer[8192];
+	memset( buffer, 0, sizeof(buffer) );
+#if defined(_WIN32)
+	GetModuleFileName( (HMODULE)0, buffer, (DWORD)sizeof(buffer) );
+#else
+	ssize_t result = readlink( "/proc/self/exe", out, outSize );
+	if ( result == -1 ) {
+		fprintf( stderr, "UTIL_GetMainDirectory(): %s\n", strerror( errno ) );
+		return 0;
+	}
+#endif
+	UTIL_ExtractFilePath( out, outSize, buffer );
+	return 1;
 }
 
 #if defined(_WIN32)

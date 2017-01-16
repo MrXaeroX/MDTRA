@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'messageDialog.ui'
 **
-** Created: Thu 25. Feb 14:08:22 2016
+** Created: Mon 16. Jan 19:04:11 2017
 **      by: Qt User Interface Compiler version 4.7.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

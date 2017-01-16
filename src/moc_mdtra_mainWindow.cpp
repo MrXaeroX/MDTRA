@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mdtra_mainWindow.h'
 **
-** Created: Thu 25. Feb 14:08:22 2016
+** Created: Mon 16. Jan 19:04:10 2017
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MDTRA_MainWindow[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-      53,   14, // methods
+      54,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -75,15 +75,16 @@ static const uint qt_meta_data_MDTRA_MainWindow[] = {
      816,   17,   17,   17, 0x08,
      830,   17,   17,   17, 0x08,
      841,   17,   17,   17, 0x08,
-     858,   17,   17,   17, 0x08,
-     886,  875,   17,   17, 0x08,
-     919,   17,   17,   17, 0x08,
-     943,   17,   17,   17, 0x08,
-     960,   17,   17,   17, 0x08,
-     977,   17,   17,   17, 0x08,
-    1002,   17,   17,   17, 0x08,
-    1024,   17,   17,   17, 0x08,
-    1051, 1044,   17,   17, 0x08,
+     852,   17,   17,   17, 0x08,
+     869,   17,   17,   17, 0x08,
+     897,  886,   17,   17, 0x08,
+     930,   17,   17,   17, 0x08,
+     954,   17,   17,   17, 0x08,
+     971,   17,   17,   17, 0x08,
+     988,   17,   17,   17, 0x08,
+    1013,   17,   17,   17, 0x08,
+    1035,   17,   17,   17, 0x08,
+    1062, 1055,   17,   17, 0x08,
 
        0        // eod
 };
@@ -112,7 +113,7 @@ static const char qt_meta_stringdata_MDTRA_MainWindow[] = {
     "toolsSelectAtoms()\0toolsDistanceSearch()\0"
     "toolsTorsionSearch()\0toolsForceSearch()\0"
     "toolsHBSearch()\0toolsPCA()\0tools2DRMSD()\0"
-    "toolsDDM()\0toolsHistogram()\0"
+    "toolsDDM()\0toolsPDM()\0toolsHistogram()\0"
     "prepWaterShell()\0row,column\0"
     "exec_on_cell_dblclicked(int,int)\0"
     "updatePanelVisibility()\0toggle_toolbar()\0"
@@ -198,19 +199,20 @@ int MDTRA_MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 40: toolsPCA(); break;
         case 41: tools2DRMSD(); break;
         case 42: toolsDDM(); break;
-        case 43: toolsHistogram(); break;
-        case 44: prepWaterShell(); break;
-        case 45: exec_on_cell_dblclicked((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 46: updatePanelVisibility(); break;
-        case 47: toggle_toolbar(); break;
-        case 48: switch_to_plot(); break;
-        case 49: switch_to_pdb_renderer(); break;
-        case 50: toggle_pdb_renderer(); break;
-        case 51: messageClickEvent(); break;
-        case 52: iconActivateEvent((*reinterpret_cast< QSystemTrayIcon::ActivationReason(*)>(_a[1]))); break;
+        case 43: toolsPDM(); break;
+        case 44: toolsHistogram(); break;
+        case 45: prepWaterShell(); break;
+        case 46: exec_on_cell_dblclicked((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 47: updatePanelVisibility(); break;
+        case 48: toggle_toolbar(); break;
+        case 49: switch_to_plot(); break;
+        case 50: switch_to_pdb_renderer(); break;
+        case 51: toggle_pdb_renderer(); break;
+        case 52: messageClickEvent(); break;
+        case 53: iconActivateEvent((*reinterpret_cast< QSystemTrayIcon::ActivationReason(*)>(_a[1]))); break;
         default: ;
         }
-        _id -= 53;
+        _id -= 54;
     }
     return _id;
 }

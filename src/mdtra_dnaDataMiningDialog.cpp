@@ -1,5 +1,5 @@
 /***************************************************************************
-* Copyright (C) 2011-2016 Alexander V. Popov.
+* Copyright (C) 2011-2017 Alexander V. Popov.
 * 
 * This file is part of Molecular Dynamics Trajectory 
 * Reader & Analyzer (MDTRA) source code.
@@ -656,7 +656,7 @@ int MDTRA_DNADataMiningDialog :: findComplementaryResidue( MDTRA_PDB_File *ppdb,
 				const MDTRA_PDB_Atom *pAtY = ppdb->fetchAtomByDesc( pResidueAtom2->chainIndex, i, pBaseDesc2->possibleConnections[k].at );
 				if (!pAtY) continue;
 				float testEnergy = calc_bond_energy( pAtX, pAtH, pAtY, pBaseDesc->possibleConnections[j].ffcode, pBaseDesc2->possibleConnections[k].ffcode );
-				if ( testEnergy > -1.0f )
+				if ( testEnergy > -0.1f )
 					continue;
 				energy += testEnergy;
 				numbonds++;
@@ -675,7 +675,7 @@ int MDTRA_DNADataMiningDialog :: findComplementaryResidue( MDTRA_PDB_File *ppdb,
 				if (!pAtX || !pAtH)continue;
 				
 				float testEnergy = calc_bond_energy( pAtX, pAtH, pAtY, pBaseDesc2->possibleConnections[k].ffcode, pBaseDesc->possibleConnections[j].ffcode );
-				if ( testEnergy > -1.0f )
+				if ( testEnergy > -0.1f )
 					continue;
 				energy += testEnergy;
 				numbonds++;

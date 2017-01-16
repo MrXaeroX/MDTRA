@@ -1,5 +1,5 @@
 /***************************************************************************
-* Copyright (C) 2011-2016 Alexander V. Popov.
+* Copyright (C) 2011-2017 Alexander V. Popov.
 * 
 * This file is part of Molecular Dynamics Trajectory 
 * Reader & Analyzer (MDTRA) source code.
@@ -35,9 +35,14 @@ void MDTRA_ScanAndLoadConfigs( void )
 	s_configList.clear();
 	s_configList.reserve( 64 );
 
+	char configpath[8192];
 	char fullname[8192];
+
+	UTIL_GetMainDirectory( configpath, sizeof(configpath) );
+	strncat_s( configpath, "./" CONFIG_DIRECTORY, sizeof(configpath)-1 );
+
 	int numconfigfiles = 0;
-	char **configfiles = UTIL_ListFiles( CONFIG_DIRECTORY, "*.cfg", &numconfigfiles );
+	char **configfiles = UTIL_ListFiles( configpath, "*.cfg", &numconfigfiles );
 	for ( int i = 0; i < numconfigfiles; ++i ) {
 		memset( fullname, 0, sizeof(fullname) );
 		strncat_s( fullname, CONFIG_DIRECTORY, sizeof(fullname)-1 );

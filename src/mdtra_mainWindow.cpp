@@ -1,5 +1,5 @@
 ﻿/***************************************************************************
-* Copyright (C) 2011-2016 Alexander V. Popov.
+* Copyright (C) 2011-2017 Alexander V. Popov.
 * 
 * This file is part of Molecular Dynamics Trajectory 
 * Reader & Analyzer (MDTRA) source code.
@@ -52,6 +52,7 @@
 #include "mdtra_hbSearchDialog.h"
 #include "mdtra_hbSearchResultsDialog.h"
 #include "mdtra_dnaDataMiningDialog.h"
+#include "mdtra_proteinDataMiningDialog.h"
 #include "mdtra_prepWaterShellDialog.h"
 #include "mdtra_pca.h"
 #include "mdtra_pcaDialog.h"
@@ -150,8 +151,9 @@ static MDTRAMenuDesc g_MenuItems[] =
 { NULL, "&Tools", NULL, NULL, NULL, NULL, NULL, false, 0, MENUDESC_DEFAULT },
 /*{ "ToolsPCA", "&Tools", "&Principal Component Analysis...", ":/png/16x16/pca.png", "F11", "Perform principal component analysis", SLOT(toolsPCA()), false, 0, MENUDESC_DEFAULT },*/
 { "Tools2DRMSD", "&Tools", "Calculate 2D-&RMSD...", ":/png/16x16/rmsd2d.png", "F12", "Calculate two-dimensional RMSD mp", SLOT(tools2DRMSD()), false, 0, MENUDESC_DEFAULT },
-{ "ToolsHistogram", "&Tools", "Build &Histogram...", ":/png/16x16/chart.png", "Ctrl+H", "Build histogram for calculated results", SLOT(toolsHistogram()), false, 0, MENUDESC_DEFAULT },
+{ "ToolsHistogram", "&Tools", "Build H&istogram...", ":/png/16x16/chart.png", "Ctrl+H", "Build histogram for calculated results", SLOT(toolsHistogram()), false, 0, MENUDESC_DEFAULT },
 { NULL, "&Tools", NULL, NULL, NULL, NULL, NULL, false, 0, MENUDESC_DEFAULT },
+{ "ToolsPDM", "&Tools", "&Protein Data Mining...", ":/png/16x16/pdm.png", NULL, "Quickly build Protein-specific result collectors", SLOT(toolsPDM()), false, 0, MENUDESC_DEFAULT },
 { "ToolsDDM", "&Tools", "DNA Data &Mining...", ":/png/16x16/ddm.png", NULL, "Quickly build DNA-specific result collectors", SLOT(toolsDDM()), false, 0, MENUDESC_DEFAULT },
 
 { "HelpReferenceManual", "&Help", "&Reference Manual", NULL, "F1", "Display " APPLICATION_TITLE_SMALL " reference manual", SLOT(showReferenceManual()),  false, 0, MENUDESC_DEFAULT },
@@ -1100,7 +1102,7 @@ void MDTRA_MainWindow :: showAbout( void )
 							"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the "
 							"GNU General Public License for more details.") );
 
-	QString aboutMsg(tr("<h2>" APPLICATION_TITLE_FULL "</h2><h3>Version: " APPLICATION_VERSION "</h3><br>Author: Alexander V. Popov.<br>Copyright &copy; 2011-2015. All rights reserved.<br><br>").append(progCopyright));
+	QString aboutMsg(tr("<h2>" APPLICATION_TITLE_FULL "</h2><h3>Version: " APPLICATION_VERSION "</h3><br>Author: Alexander V. Popov.<br>Copyright &copy; 2011-2017. All rights reserved.<br><br>").append(progCopyright));
 	QMessageBox::about(this, tr("About %1").arg(APPLICATION_TITLE_SMALL), aboutMsg);
 }
 
@@ -2030,6 +2032,17 @@ void MDTRA_MainWindow :: toolsDDM( void )
 	}
 
 	MDTRA_DNADataMiningDialog dialog(this);
+	dialog.exec();
+}
+
+void MDTRA_MainWindow :: toolsPDM( void )
+{
+	if (m_pProject->getValidStreamCount() < 1) {
+        QMessageBox::warning(this, tr(APPLICATION_TITLE_SMALL), tr("Cannot open Protein Data Mining Tool: no valid streams!"));
+        return;
+	}
+
+	MDTRA_ProteinDataMiningDialog dialog(this);
 	dialog.exec();
 }
 
